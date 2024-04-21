@@ -1,0 +1,103 @@
+@import url("~/assets/css/media.css");
+
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.introduce {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	padding: 0 10px;
+	color: var(--main-white);
+	text-align: center;
+	background-image: url("~/assets/img/main.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.title {
+	max-width: 1085px;
+	font-size: var(--font-size-900);
+	font-weight: bold;
+	line-height: 80px;
+}
+
+.text {
+	max-width: 822px;
+	font-size: var(--font-size-550);
+	line-height: 32px;
+}
+
+.icon {
+	margin-top: 30px;
+	font-size: var(--font-size-400);
+	font-weight: bold;
+	line-height: 34px;
+}
+
+.button {
+	width: 50%;
+	background-color: black;
+	border: transparent;
+}
+
+.button-wrapper {
+	display: flex;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+@keyframes appearance-left {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes appearance-right {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@media (--hover-active) {
+	.button:hover {
+		color: var(--main-white);
+		background-color: var(--main-color);
+	}
+}
+
+@media screen and (--medium-screen) {
+	.title {
+		font-size: var(--font-size-600);
+		line-height: 60px;
+	}
+
+	.text {
+		font-size: var(--font-size-400);
+		line-height: 24px;
+	}
+
+	.icon {
+		font-size: var(--font-size-300);
+		line-height: 22px;
+	}
+}

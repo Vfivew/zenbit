@@ -1,0 +1,103 @@
+@import url("~/assets/css/media.css");
+
+.button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: inherit;
+	font-weight: inherit;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid;
+	transition: 0.3s ease;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.regular {
+	min-height: 44px;
+	padding: 8px 24px;
+	font-size: var(--font-size-300);
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.small {
+	min-height: 32px;
+	padding: 4px 16px;
+	font-size: var(--font-size-200);
+	border-radius: 5px;
+}
+
+.default {
+	width: 160px;
+	min-height: 54px;
+	padding: 10px 24px;
+	font-size: var(--font-size-200);
+	border-radius: 8px;
+}
+
+.regular > .content {
+	column-gap: 8px;
+}
+
+.small > .content {
+	column-gap: 4px;
+}
+
+.default > .content {
+	display: flex;
+	flex-direction: row-reverse;
+	column-gap: 8px;
+}
+
+.primary {
+	color: var(--main-white);
+	background-color: var(--main-color);
+	border-color: var(--main-color);
+}
+
+.secondary {
+	color: var(--main-white);
+	background-color: transparent;
+	border-color: var(--main-white);
+}
+
+.primary:focus-visible {
+	outline: 2px solid blue;
+}
+
+.secondary:focus-visible {
+	outline: 2px solid blue;
+}
+
+.content-hidden {
+	visibility: hidden;
+}
+
+.button-loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media (--hover-active) {
+	.secondary:hover {
+		color: var(--main-color);
+		background-color: var(--dark-blue);
+		border-color: var(--main-color);
+	}
+
+	.primary:hover {
+		color: var(--main-color);
+		background-color: transparent;
+		border-color: var(--main-color);
+	}
+}

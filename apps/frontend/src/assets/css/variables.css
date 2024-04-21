@@ -1,0 +1,33 @@
+:root {
+	--font-size-50: 10px;
+	--font-size-100: 12px;
+	--font-size-150: 13px;
+	--font-size-200: 14px;
+	--font-size-300: 16px;
+	--font-size-350: 18px;
+	--font-size-400: 20px;
+	--font-size-500: 22px;
+	--font-size-550: 24px;
+	--font-size-600: 28px;
+	--font-size-700: 30px;
+	--font-size-800: 42px;
+	--font-size-900: 64px;
+	--container-width: 1000px;
+	--z-index-low: 10;
+	--z-index-medium: 100;
+	--z-index-high: 1000;
+	--color-background: #f5f7f7;
+	--z-index-begin: 1;
+	--color-text-300: #313134;
+	--color-error: #f20c08;
+	--main-black: #1b0707;
+	--main-white: #ffffff;
+	--main-color: #b29f7e;
+	--dark-blue: #172234;
+	--main-grey: #e0e0e0;
+}
+
+.custom-toast-container {
+	--toastify-color-light: #b29f7e;
+	--toastify-text-color-light: #ffffff;
+}

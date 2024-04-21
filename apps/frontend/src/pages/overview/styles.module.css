@@ -1,0 +1,6 @@
+@import url("~/assets/css/media.css");
+
+.container {
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,21 @@
+{
+	"name": "@website/shared",
+	"version": "1.47.0",
+	"type": "module",
+	"main": "src/index.ts",
+	"types": "src/index.ts",
+	"engines": {
+		"node": "18.x.x",
+		"npm": ">=9.x.x"
+	},
+	"scripts": {
+		"lint:type": "npx tsc --noEmit",
+		"lint:js": "npx eslint . --max-warnings=0 --no-warn-ignored",
+		"lint": "concurrently \"npm:lint:*\"",
+		"build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json"
+	},
+	"dependencies": {
+		"date-fns": "3.3.1",
+		"zod": "3.22.4"
+	}
+}

@@ -1,0 +1,100 @@
+@import url("~/assets/css/media.css");
+
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	font-size: var(--font-size-200);
+}
+
+.heading {
+	margin-bottom: 3px;
+	font-weight: 500;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.input {
+	max-height: 37px;
+}
+
+.input,
+.textarea {
+	padding: 12px;
+	font-family: inherit;
+	font-weight: 500;
+	cursor: text;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+	font-weight: 400;
+	color: var(--main-black);
+	opacity: 0.6;
+}
+
+.textarea {
+	box-sizing: content-box;
+	overflow: hidden;
+	line-height: 20px;
+	resize: none;
+}
+
+.light {
+	color: var(--color-text-200);
+	background-color: var(--main-grey);
+	border: 2px solid transparent;
+}
+
+.light:focus {
+	color: var(--color-text-300);
+	border: 2px solid var(--main-black);
+}
+
+.light:valid {
+	color: var(--color-text-300);
+}
+
+.light:-webkit-autofill,
+.light:-webkit-autofill:focus {
+	box-shadow: 0 0 0 1000px var(--color-background) inset;
+}
+
+.error {
+	position: absolute;
+	right: 0;
+	bottom: -19px;
+	display: block;
+	width: 100%;
+	font-size: var(--font-size-100);
+	color: var(--color-error);
+	text-align: end;
+}
+
+.error-input {
+	border: 2px solid var(--color-error);
+}
+
+.icon {
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	color: var(--color-text-200);
+}
+
+.input-with-icon {
+	padding-left: 42px;
+}
+
+@media (--hover-active) {
+	.light:-webkit-autofill:hover {
+		box-shadow: 0 0 0 1000px var(--color-background) inset;
+	}
+
+	.dark:-webkit-autofill:hover {
+		transition: background-color 1s 5000s;
+	}
+}

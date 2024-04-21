@@ -1,0 +1,76 @@
+@import url("~/assets/css/media.css");
+
+.container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	min-height: 80vh;
+}
+
+.wrapper-container {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	max-width: 1140px;
+}
+
+.form-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40%;
+	padding: 0 100px;
+	border-radius: 37px;
+	animation: appearance-right 800ms ease-out;
+}
+
+.form-image {
+	width: 100%;
+	height: calc(100vh - 80px);
+	background-image: url("~/assets/img/city.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	animation: appearance-left 800ms ease-out;
+}
+
+@keyframes appearance-left {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes appearance-right {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@media screen and (--medium-screen) {
+	.form-container {
+		padding: 0 20px;
+	}
+}
+
+@media screen and (--small-screen) {
+	.form-container {
+		padding: 0;
+	}
+
+	.form-image {
+		display: none;
+	}
+}

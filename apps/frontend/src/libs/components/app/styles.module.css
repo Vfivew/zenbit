@@ -1,0 +1,40 @@
+@import url("~/assets/css/media.css");
+
+.page-layout {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+}
+
+.page {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding-left: 252px;
+	background-color: var(--color-background);
+}
+
+.main-container {
+	flex-grow: 1;
+	width: 100%;
+}
+
+@media screen and (--large-screen) {
+	.page {
+		padding-left: 100px;
+	}
+}
+
+@media screen and (--small-screen) {
+	.page {
+		padding: 0;
+	}
+}
+
+@media (display-mode: standalone) and (--small-screen) {
+	.page-layout {
+		padding-bottom: 83px;
+	}
+}

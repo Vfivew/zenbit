@@ -1,0 +1,7 @@
+.link {
+	text-decoration: none;
+}
+
+.link:focus-visible {
+	outline: 2px solid blue;
+}

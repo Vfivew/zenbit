@@ -1,0 +1,182 @@
+@import url("~/assets/css/media.css");
+
+.header-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: var(--dark-blue);
+}
+
+.burger-controller {
+	width: 100%;
+	max-width: 1140px;
+	background-color: var(--dark-blue);
+}
+
+.burger-cheakbox,
+.menu {
+	display: none;
+}
+
+.burger-nav {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	height: 60px;
+	margin: 10px 20px;
+	text-align: center;
+}
+
+.burger-list {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	margin: 0;
+	list-style: none;
+}
+
+.burger-link {
+	width: 160px;
+	padding: 11px 0;
+	font-size: var(--font-size-300);
+	font-weight: bold;
+	line-height: 22px;
+	color: var(--main-color);
+	background-color: transparent;
+	border: 1px solid var(--main-color);
+	border-radius: 5px;
+	transition: 0.3s;
+}
+
+.active {
+	color: var(--main-white);
+	background-color: var(--main-color);
+}
+
+.burger-link:focus-visible {
+	color: var(--main-white);
+}
+
+.log-out-btn {
+	font-size: var(--font-size-350);
+	font-weight: bold;
+}
+
+@media screen and (--hover-active) {
+	.burger-link:hover {
+		color: var(--main-white);
+		background-color: var(--main-color);
+	}
+}
+
+@media screen and (--medium-screen) {
+	.header-container {
+		background-color: var(--color-background);
+	}
+
+	.burger-cheakbox,
+	.menu {
+		display: block;
+	}
+
+	.burger-nav {
+		justify-content: end;
+	}
+
+	.burger-controller .menu {
+		position: absolute;
+		top: -100px;
+		z-index: 100;
+		width: 100px;
+		height: 180px;
+		cursor: pointer;
+		background: var(--main-color);
+		border-radius: 25%;
+		box-shadow:
+			0 0 0 0 var(--main-color),
+			0 0 0 0 var(--main-color);
+		transition: 0.5s ease-in-out;
+	}
+
+	.burger-controller .hamburger {
+		position: absolute;
+		top: 135px;
+		left: 35px;
+		display: block;
+		width: 30px;
+		height: 2px;
+		background: var(--main-white);
+		transition: 0.5s ease-in-out;
+		transform-origin: center;
+	}
+
+	.burger-controller .hamburger::after,
+	.burger-controller .hamburger::before {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		content: "";
+		background: var(--main-white);
+		transition: 0.5s ease-in-out;
+	}
+
+	.burger-controller .hamburger::before {
+		top: -10px;
+	}
+
+	.burger-controller .hamburger::after {
+		bottom: -10px;
+	}
+
+	.burger-controller .burger-cheakbox {
+		display: none;
+	}
+
+	.burger-controller .burger-cheakbox:checked + .menu {
+		border-radius: 0 0 50%;
+		box-shadow:
+			0 0 0 30vh var(--dark-blue),
+			0 0 0 60vh transparent;
+	}
+
+	.burger-controller .burger-list {
+		position: absolute;
+		top: 160px;
+		left: 110px;
+		z-index: 200;
+		flex-direction: column;
+		padding: 0;
+		opacity: 0;
+		transition: 0.25s 0s ease-in-out;
+		transform: translate(-50%, -50%);
+	}
+
+	.burger-controller .burger-cheakbox:checked + .menu .hamburger {
+		transform: rotate(45deg);
+	}
+
+	.burger-controller .burger-cheakbox:checked + .menu .hamburger::after {
+		bottom: 0;
+		transform: rotate(90deg);
+	}
+
+	.burger-controller .burger-cheakbox:checked + .menu .hamburger::before {
+		top: 0;
+		transform: rotate(90deg);
+	}
+
+	.burger-cheakbox:checked ~ .burger-nav .burger-list {
+		opacity: 1;
+	}
+
+	.burger-controller .burger-link {
+		display: block;
+		color: white;
+		text-decoration: none;
+	}
+
+	.burger-controller .burger-link:focus-visible {
+		color: var(--main-black);
+	}
+}

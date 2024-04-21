@@ -1,0 +1,79 @@
+@import url("~/assets/css/media.css");
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+	width: 100%;
+	max-width: 253px;
+	color: var(--main-black);
+}
+
+.title {
+	margin: 0;
+	font-size: var(--font-size-600);
+	font-weight: 600;
+	line-height: 48px;
+}
+
+.subtitle {
+	margin-top: 0;
+	font-size: var(--font-size-200);
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.link {
+	color: var(--main-color);
+	text-decoration: none;
+	transition: 0.1s color ease;
+}
+
+.password-input {
+	position: relative;
+}
+
+.password {
+	padding-right: 50px;
+}
+
+.button {
+	font-weight: 700;
+}
+
+.icon {
+	position: absolute;
+	top: 34px;
+	right: 18px;
+	min-height: auto;
+	padding: 0;
+	background-color: transparent;
+	border: unset;
+}
+
+.link:focus-visible {
+	text-decoration: underline;
+}
+
+@media screen and (--small-screen) {
+	.form {
+		width: auto;
+		max-width: unset;
+		padding: 10px 30px;
+		margin-top: 0;
+	}
+
+	.button {
+		margin-top: 24px;
+	}
+}
+
+@media (--hover-active) {
+	.link:hover {
+		text-decoration: underline;
+	}
+
+	.icon:hover {
+		background-color: transparent;
+	}
+}
